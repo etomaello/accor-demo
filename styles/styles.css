@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
- :root {
+:root {
   /* colors */
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
@@ -40,6 +40,15 @@
   /* nav height */
   --nav-height: 64px;
 
+  /* Accor Colors */
+  --background-accent-primary-default: #068484;
+  --background-inverse-brand-default: ##FFF;
+  --border-decorative: #DADADD;
+  --brand-accent: #161421;
+  --icon-brand: #1E1852;
+  --neutral-white: ##FFF;
+  --text-body-primary: #3E3D48;
+  --text-heading: #252339;
 }
 
 @font-face {
@@ -79,8 +88,12 @@ header {
   height: var(--nav-height);
 }
 
-h1, h2, h3,
-h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--heading-font-family);
   font-weight: 600;
   line-height: 1.25;
@@ -89,16 +102,70 @@ h4, h5, h6 {
   scroll-margin: calc(var(--nav-height) + 1em);
 }
 
-h1 { font-size: var(--heading-font-size-xxl) }
-h2 { font-size: var(--heading-font-size-xl) }
-h3 { font-size: var(--heading-font-size-l) }
-h4 { font-size: var(--heading-font-size-m) }
-h5 { font-size: var(--heading-font-size-s) }
-h6 { font-size: var(--heading-font-size-xs) }
+h1 {
+  color: var(--text-heading, #252339);
+  text-align: center;
+  font-family: Montserrat, Arial, sans-serif;;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  margin: 8px 0;
+}
 
-p, dl, ol, ul, pre, blockquote {
+h2 {
+  color: var(--text-heading, #252339);
+  text-align: center;
+  font-family: Unna, Arial, sans-serif;;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 8px 0;
+}
+
+h3 {
+  color: var(--text-heading, #252339);
+  text-align: center;
+  font-family: Montserrat, Arial, sans-serif;;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  margin: 0;
+}
+
+h4 {
+  font-size: var(--heading-font-size-m)
+}
+
+h5 {
+  font-size: var(--heading-font-size-s)
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs)
+}
+
+p,
+dl,
+ol,
+ul,
+pre,
+blockquote {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+p {
+  color: var(--text-heading, #252339);
+  font-family: Roboto, Arial, sans-serif;;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+  text-align: center;
 }
 
 hr {
@@ -108,12 +175,15 @@ hr {
   border-bottom: 1px solid var(--overlay-background-color);
 }
 
-code, pre, samp {
+code,
+pre,
+samp {
   font-family: var(--fixed-font-family);
   font-size: var(--body-font-size-s);
 }
 
-code, samp {
+code,
+samp {
   padding: .125em;
 }
 
@@ -140,7 +210,8 @@ a:hover {
 }
 
 /* buttons */
-a.button:any-link, button {
+a.button:any-link,
+button {
   font-family: var(--body-font-family);
   display: inline-block;
   box-sizing: border-box;
@@ -160,17 +231,22 @@ a.button:any-link, button {
   border-radius: 30px;
 }
 
-a.button:hover, a.button:focus, button:hover, button:focus  {
+a.button:hover,
+a.button:focus,
+button:hover,
+button:focus {
   background-color: var(--link-hover-color);
   cursor: pointer;
 }
 
-button:disabled, button:disabled:hover {
+button:disabled,
+button:disabled:hover {
   background-color: var(--overlay-background-color);
   cursor: unset;
 }
 
-a.button.secondary, button.secondary {
+a.button.secondary,
+button.secondary {
   background-color: unset;
   border: 2px solid currentcolor;
   color: var(--text-color)
@@ -229,23 +305,43 @@ main img {
 }
 
 main .section {
-  padding: 64px 16px;
+  padding: 24px 16px;
 }
 
 @media (min-width: 600px) {
   main .section {
-    padding: 64px 32px;
+    padding: 24px 32px;
   }
 }
 
 @media (min-width: 900px) {
-  .section > div {
+  .section>div {
     max-width: 1200px;
     margin: auto;
+  }
+
+  .section>div>p>u {
+    display: flex;
+    padding: 16px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    background: var(--blue-default, #1E1852);
+    margin: auto;
+    width: 106px;
+    align-self: flex-end;
+    color: var(--neutral-white, #FFF);
+    text-decoration: none;
+    font-family: Roboto, Arial, sans-serif;;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 37px;
   }
 }
 
 /* section metadata */
 main .section.highlight {
-  background-color: var(--highlight-background-color);
+  background-color: #FFF;
 }

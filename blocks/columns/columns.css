@@ -1,8 +1,3 @@
-.columns > div {
-  display: flex;
-  flex-direction: column;
-}
-
 .columns img {
   width: 100%;
 }
@@ -19,15 +14,99 @@
   display: block;
 }
 
-@media (min-width: 900px) {
-  .columns > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 32px;
-  }
+.columns {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+}
 
-  .columns > div > div {
-    flex: 1;
-    order: unset;
-  }
+.column {
+display: flex;
+width: 387px;
+padding: 40px 20px 44px;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+flex-shrink: 0;
+border-radius: 4px;
+border: 1px solid var(--border-decorative, #DADADD);
+background: var(--background-inverse-brand-default, #FFF);
+}
+
+ul.text-div-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+ul.text-div-list > li {
+color: var(--text-body-primary, #3E3D48);
+font-family: Roboto, Arial, sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+list-style-type: none;
+}
+
+ul.text-div-list > li::before {
+	content: '';
+	width: 24px;
+	height: 24px;
+  display: block;
+  float: left;
+  background: url("../../icons/listing-24.svg");
+  background-size: cover;
+  background-position: center;
+  margin-right: 12px;
+}
+
+.text-div-button > u {
+  display: flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  background: var(--background-accent-primary-default, #068484);
+  margin: auto;
+  width: 106px;
+  align-self: flex-end;
+  color: var(--neutral-white, #FFF);
+  text-decoration: none;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.text-div-title {
+color: #000;
+text-align: center;
+font-family: Roboto, Arial, sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px;
+margin: 0;
+}
+
+.sub-title {
+color: var(--brand-accent, #161421);
+font-family: Roboto, Arial, sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+text-align: center;
+margin: 0;
+}
+
+hr {
+  margin-top: 48px;
+  margin-bottom: 0;
+  width: 1212px;
+  border: 0;
+  border-bottom: 1px solid var(--border-decorative, #DADADD);
 }
