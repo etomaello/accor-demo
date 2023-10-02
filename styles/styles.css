@@ -42,11 +42,11 @@
 
   /* Accor Colors */
   --background-accent-primary-default: #068484;
-  --background-inverse-brand-default: ##FFF;
+  --background-inverse-brand-default: #FFF;
   --border-decorative: #DADADD;
   --brand-accent: #161421;
   --icon-brand: #1E1852;
-  --neutral-white: ##FFF;
+  --neutral-white: #FFF;
   --text-body-primary: #3E3D48;
   --text-heading: #252339;
 }
@@ -332,7 +332,7 @@ main .section {
     align-self: flex-end;
     color: var(--neutral-white, #FFF);
     text-decoration: none;
-    font-family: Roboto, Arial, sans-serif;;
+    font-family: Roboto, Arial, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
