@@ -15,7 +15,7 @@
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
   --background-color: #fff;
-  --overlay-background-color: #eee;
+  --overlay-background-color: #050033;
   --highlight-background-color: #ccc;
   --text-color: #000;
 
@@ -52,6 +52,18 @@
   --color-neutral-90: #252339;
   --text-description-grey: #6f6e77;
   --color-secondary-500: #1264a3;
+  --color-neutral-20: #dadadd;
+  --color-marketing: #3d4892;
+  --color-brand-900: #050033;
+  --color-text-inverse: #fff;
+  --color-background-light: #fff;
+  --color-button-secondary-inverse-hover: rgba(255, 255, 255, 0.9);
+  --color-brand-400: #8d88b4;
+  --small: 768px;
+  --medium: 1024px;
+  --large: 1279px;
+  --xlarge: 1440px;
+  --max-width: 1312px;
 }
 
 @font-face {
@@ -168,13 +180,11 @@ blockquote {
 }
 
 p {
-  color: var(--text-heading, #252339);
   font-family: Roboto, Arial, sans-serif;;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  text-align: center;
   margin-block-start: 1em;
   margin-block-end: 1em;
 }

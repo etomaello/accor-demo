@@ -47,6 +47,8 @@ export default function decorate(block) {
 
     const hr = document.createElement('hr');
 
+    hr.className = 'columns-hr';
+
     const myColumnsSection = document.querySelector('.section.columns-container');
 
     myColumnsSection.appendChild(hr);
