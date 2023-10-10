@@ -38,7 +38,8 @@
     --heading-font-size-xs: 18px;
 
     /* nav height */
-    --nav-height: 64px;
+    --nav-height-desktop: 60px;
+    --nav-height-mobile: 45px;
 
     /* Accor Colors */
     --background-accent-primary-default: #068484;
@@ -86,7 +87,7 @@ body.appear {
 }
 
 header {
-    height: var(--nav-height);
+    height: var(--nav-height-mobile);
 }
 
 h1, h2, h3,
@@ -96,7 +97,7 @@ h4, h5, h6 {
     line-height: 1.25;
     margin-top: 1em;
     margin-bottom: .5em;
-    scroll-margin: calc(var(--nav-height) + 1em);
+    scroll-margin: calc(var(--nav-height-mobile) + 1em);
 }
 
 h1 {
@@ -326,6 +327,26 @@ main .section.highlight {
     text-align: center;
 }
 
+/* accordion */
+.group-label strong::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    transform: rotate(135deg);
+    width: 12px;
+    height: 10px;
+    transition: all .3s ease;
+    top: 12px;
+    border: 2px solid currentcolor;
+    border-radius: 0 1px 0 0;
+    border-width: 2px 2px 0 0;
+}
+
+.group-label.open strong::after {
+    transform: rotate(315deg);
+    top:20px;
+}
 
 @media screen and (max-width: 767px) {
     h1 {
