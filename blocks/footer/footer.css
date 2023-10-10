@@ -12,3 +12,108 @@ footer .footer {
 footer .footer p {
   margin: 0;
 }
+
+/* start jordan changes */
+.footer-links {
+    flex-basis: 100%;
+    background-color: #050033;
+    margin: 12px 0;
+}
+
+.footer-links p {
+    text-align: left;
+}
+
+.footer-links ul {
+    display: none
+}
+
+.footer-links li {
+    list-style: none;
+}
+
+.footer-links a {
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-top: 12px;
+    display: block;
+}
+
+.footer-links a:hover {
+    text-decoration: none;
+}
+
+.footer-links > div {
+    cursor:pointer;
+    border-top: 1px solid rgb(255 255 255 / 15%);
+    padding: 12px 0;
+}
+
+.footer-links h2 {
+    font-size: 18px;
+    color: #fff;
+    line-height: 24px;
+    text-align: left;
+    font-weight: 500;
+    margin: 0;
+    position: relative;
+}
+
+.footer-links h2::after,
+.footer-links h2::before {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    transition: transform .5s;
+    width: 8px;
+}
+
+.footer-links h2::after {
+    right: 0;
+    transform: rotate(-45deg);
+}
+
+.footer-links h2::before {
+    right: 5px;
+    transform: rotate(45deg);
+}
+
+@media (min-width: 768px) {
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-links > div {
+        border: 0;
+        padding: 0;
+        flex-basis: 50%;
+        margin: 24px 0;
+        cursor: default;
+    }
+
+    .footer-links h2::after,
+    .footer-links h2::before {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-links > div {
+        flex-basis: 25%;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    .footer-links > div {
+        flex-basis: 20%;
+    }
+}
+
+/* end jordan changes */
