@@ -6,6 +6,7 @@ function generateUnique() {
 
 const formatFns = await (async function imports() {
   try {
+    // eslint-disable-next-line import/no-unresolved
     const formatters = await import('./formatting.js');
     return formatters.default;
   } catch (e) {
@@ -300,6 +301,7 @@ function renderField(fd) {
 
 async function applyTransformation(formDef, form) {
   try {
+    // eslint-disable-next-line import/no-unresolved
     const { requestTransformers, transformers } = await import('./decorators/index.js');
     if (transformers) {
       transformers.forEach(

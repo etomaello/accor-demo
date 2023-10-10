@@ -22,7 +22,8 @@
   /* fonts */
   --body-font-family: roboto, roboto-fallback;
   --heading-font-family: var(--body-font-family);
-  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+  --fixed-font-family: "Roboto Mono", menlo, consolas, "Liberation Mono",
+    monospace;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -42,12 +43,12 @@
 
   /* Accor Colors */
   --background-accent-primary-default: #068484;
-  --background-inverse-brand-default: #FFF;
-  --border-decorative: #DADADD;
+  --background-inverse-brand-default: #fff;
+  --border-decorative: #dadadd;
   --brand-accent: #161421;
-  --icon-brand: #1E1852;
-  --neutral-white: #FFF;
-  --text-body-primary: #3E3D48;
+  --icon-brand: #1e1852;
+  --neutral-white: #fff;
+  --text-body-primary: #3e3d48;
   --text-heading: #252339;
   --color-neutral-90: #252339;
   --text-description-grey: #6f6e77;
@@ -57,7 +58,7 @@
   --color-brand-900: #050033;
   --color-text-inverse: #fff;
   --color-background-light: #fff;
-  --color-button-secondary-inverse-hover: rgba(255, 255, 255, 0.9);
+  --color-button-secondary-inverse-hover: rgb(255 255 255 90%);
   --color-brand-400: #8d88b4;
   --small: 768px;
   --medium: 1024px;
@@ -70,9 +71,8 @@
   font-family: roboto-fallback;
   size-adjust: 100.06%;
   ascent-override: 95%;
-  src: local('Arial');
+  src: local("Arial");
 }
-
 
 @media (min-width: 900px) {
   :root {
@@ -111,34 +111,31 @@ h6 {
   font-weight: 600;
   line-height: 1.25;
   margin-top: 1em;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   scroll-margin: calc(var(--nav-height) + 1em);
 }
 
 h1 {
   color: var(--text-heading, #252339);
   text-align: center;
-  font-family: Montserrat, Arial, sans-serif;;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: 3rem;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: -.031rem;
+  letter-spacing: -0.031rem;
   line-height: 3.5rem;
   margin: 0 0 3rem;
-  text-align: center;
 }
 
 h2 {
-  font-family: Montserrat, Arial, sans-serif;;
+  font-family: Montserrat, Arial, sans-serif;
   line-height: 2.75rem;
-  margin: 0 0 2rem 0;
+  margin: 0 0 2rem;
   display: block;
-  font-size: 1.5em;
   margin-block-start: 0.83em;
   margin-block-end: 0.83em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   color: var(--color-neutral-90, #252339);
   font-size: 2.25rem;
   font-weight: 700;
@@ -158,15 +155,15 @@ h3 {
 }
 
 h4 {
-  font-size: var(--heading-font-size-m)
+  font-size: var(--heading-font-size-m);
 }
 
 h5 {
-  font-size: var(--heading-font-size-s)
+  font-size: var(--heading-font-size-s);
 }
 
 h6 {
-  font-size: var(--heading-font-size-xs)
+  font-size: var(--heading-font-size-xs);
 }
 
 p,
@@ -180,7 +177,7 @@ blockquote {
 }
 
 p {
-  font-family: Roboto, Arial, sans-serif;;
+  font-family: Roboto, Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -205,7 +202,7 @@ samp {
 
 code,
 samp {
-  padding: .125em;
+  padding: 0.125em;
 }
 
 pre {
@@ -215,7 +212,7 @@ pre {
 main pre {
   background-color: var(--overlay-background-color);
   padding: 1em;
-  border-radius: .25em;
+  border-radius: 0.25em;
   overflow-x: auto;
   white-space: pre;
 }
@@ -263,7 +260,7 @@ a.button.secondary,
 button.secondary {
   background-color: unset;
   border: 2px solid currentcolor;
-  color: var(--text-color)
+  color: var(--text-color);
 }
 
 main input {
@@ -320,7 +317,7 @@ main img {
 
 main .section {
   color: #6f6e77;
-  font-family: "roboto";
+  font-family: Roboto, Arial, sans-serif;
   margin: 2rem auto;
   max-width: 90rem;
   overflow-x: hidden;
@@ -330,7 +327,7 @@ main .section {
 @media (min-width: 600px) {
   main .section {
     color: #6f6e77;
-    font-family: "roboto";
+    font-family: Roboto, Arial, sans-serif;
     margin: 2rem auto;
     max-width: 90rem;
     overflow-x: hidden;
@@ -340,24 +337,24 @@ main .section {
 
 /* section metadata */
 main .section.highlight {
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .default-content-wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 62.875rem;
-    text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 62.875rem;
+  text-align: center;
 }
 
-
 @media screen and (max-width: 767px) {
-h1 {
+  h1 {
     font-size: 1.875rem;
     line-height: 2.75rem;
     margin: 0 0 2rem;
-}
-h3 {
-  font-size: 1.125rem;
-}
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
 }

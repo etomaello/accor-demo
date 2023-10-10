@@ -5,7 +5,6 @@ footer {
 }
 
 footer .footer {
-  max-width: 1200px;
   margin: auto;
 }
 
@@ -43,12 +42,20 @@ footer .hidden {
   max-width: var(--max-width);
 }
 
-hr > .brands-collection-hr {
+.brands-collection-hr {
   border: 0;
   border-top: 1px solid var(--color-background-light);
   clear: both;
   margin: 0;
   opacity: 0.15;
+}
+
+.main {
+  opacity: 0.6;
+}
+
+.end {
+  margin-top: 25px;
 }
 
 .brands-collection-svg {
@@ -64,20 +71,18 @@ hr > .brands-collection-hr {
 
 .brands-collection-category {
   font-style: italic;
-  color: var( --neutral-white, #FFF);
+  color: var(--neutral-white, #fff);
   padding: 16px 0;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-
 .brands-collection-title {
-  font-family: 'Unna', Georgia, serif;
+  font-family: Unna, Georgia, serif;
   font-size: 24px;
   width: min-content;
 }
-
 
 .brands-collection-list {
   display: flex;
@@ -92,13 +97,12 @@ hr > .brands-collection-hr {
   min-width: 5.7rem;
 }
 
-
 .brands-collection-elements-urls {
   display: block;
   height: 0;
   padding-bottom: 50%;
   position: relative;
-  margin-top:0;
+  margin-top: 0;
   transition: background 0.3s ease-in-out;
 }
 
@@ -122,7 +126,7 @@ hr > .brands-collection-hr {
   left: 0;
   position: absolute;
   top: 0;
-  transition: fill .2s;
+  transition: fill 0.2s;
   width: 100%;
 }
 

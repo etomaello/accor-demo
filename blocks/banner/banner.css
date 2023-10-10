@@ -55,7 +55,7 @@
     }
 }
 
-.bloc-enroll-banner-link .roundButton {
+.bloc-enroll-banner-link .round-button {
     background: var(--neutral-white, #FFF);
     color: var(--icon-brand, #1E1852);
     border-radius: 1.875rem;

@@ -83,7 +83,6 @@
   text-align: left;
 }
 
-
 .row-blocs-usp {
   align-items: flex-start;
   display: flex;
@@ -124,10 +123,12 @@
   .row-blocs-content {
     display: block;
   }
+
   .row-blocs-usp-content {
     margin-bottom: 2.063rem;
     margin-right: 0;
 }
+
 .bloc-picture.three {
   width:100%
 }
