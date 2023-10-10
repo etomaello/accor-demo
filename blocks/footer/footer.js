@@ -124,6 +124,31 @@ export default async function decorate(block) {
     container.innerHTML = '';
     container.appendChild(newContainer);
 
+    // toggle footer links on mobile
+    const footerLinks = footer.querySelector('.footer-links');
+
+    footerLinks.addEventListener('click', (event) => {
+      const { target } = event;
+
+      if (target.tagName.toLowerCase() === 'h2') {
+        // If the parent div is already open, close it
+        const parentDiv = target.closest('div > div').parentElement;
+        if (parentDiv.classList.contains('open')) {
+          parentDiv.classList.remove('open');
+          return;
+        }
+
+        // Remove "open" class from all sibling divs
+        const siblingDivs = target.closest('.footer-links').querySelectorAll('div > div');
+        siblingDivs.forEach((div) => {
+          div.parentElement.classList.remove('open');
+        });
+
+        // Add "open" class to the parent div of the clicked h2
+        parentDiv.classList.add('open');
+      }
+    });
+
     // Add the SVG icons sprites
     const hiddenDiv = document.createElement('div');
     hiddenDiv.className = 'hidden';

@@ -1,5 +1,5 @@
 footer {
-  padding: 2rem;
+  padding: 1rem;
   background-color: var(--overlay-background-color);
   font-size: var(--body-font-size-s);
 }
@@ -147,6 +147,18 @@ footer .hidden {
     margin: 12px 0;
 }
 
+.footer-links .open ul{
+    display: block;
+}
+
+.footer-links .open h2::after {
+    transform: rotate(45deg);
+}
+
+.footer-links .open h2::before {
+    transform: rotate(-45deg);
+}
+
 .footer-links p {
     text-align: left;
 }
@@ -211,9 +223,17 @@ footer .hidden {
 }
 
 @media (min-width: 768px) {
+    .footer-wrapper {
+        padding: 1rem 2rem;
+    }
+
     .footer-links {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .footer-links ul {
+        display: block
     }
 
     .footer-links > div {
