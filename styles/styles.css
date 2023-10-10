@@ -315,28 +315,6 @@ main .section {
     padding: 0 0 2rem;
 }
 
-@media (min-width: 600px) {
-    main .section {
-        color: #6f6e77;
-        font-family: Roboto, Arial, sans-serif;
-        margin: 2rem auto;
-        max-width: 90rem;
-        overflow-x: hidden;
-        padding: 0 0 2rem;
-    }
-}
-
-@media (min-width: 600px) {
-    main .section {
-        color: #6f6e77;
-        font-family: Roboto, Arial, sans-serif;
-        margin: 2rem auto;
-        max-width: 90rem;
-        overflow-x: hidden;
-        padding: 0 0 2rem;
-    }
-}
-
 /* section metadata */
 main .section.highlight {
     background-color: #fff;
