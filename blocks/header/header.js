@@ -1,7 +1,7 @@
 import { getMetadata, decorateIcons } from '../../scripts/aem.js';
 
 // media query match that indicates mobile/tablet width
-const isDesktop = window.matchMedia('(min-width: 900px)');
+const isDesktop = window.matchMedia('(min-width: 5000px)');
 
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
@@ -85,6 +85,15 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
+function decorateAccordion(linkGroup) {
+  const label = linkGroup.parentNode;
+  label.classList.add('group-label');
+  label.addEventListener('click', () => {
+    label.classList.toggle('open');
+  });
+  linkGroup.classList.add('link-group');
+}
+
 /**
  * decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -103,11 +112,24 @@ export default async function decorate(block) {
     nav.id = 'nav';
     nav.innerHTML = html;
 
-    const classes = ['brand', 'sections', 'tools'];
-    classes.forEach((c, i) => {
-      const section = nav.children[i];
-      if (section) section.classList.add(`nav-${c}`);
-    });
+    const navItems = nav.querySelectorAll('div');
+    const headerElementsSize = navItems.length;
+
+    // add brand
+    navItems[0].classList.add('nav-brand');
+    // add tools
+    navItems[headerElementsSize - 1].classList.add('nav-tools');
+    navItems[headerElementsSize - 1].querySelector('p').classList.add('button-container');
+    navItems[headerElementsSize - 1].querySelector('a').classList.add('button');
+
+    // create nav sections
+    const sectionsContainer = document.createElement('div');
+    sectionsContainer.classList.add('nav-sections');
+    for (let i = 1; i < headerElementsSize - 1; i += 1) {
+      sectionsContainer.appendChild(navItems[i]);
+    }
+    sectionsContainer.querySelectorAll('li ul').forEach((linkGroup) => { decorateAccordion(linkGroup); });
+    navItems[0].insertAdjacentElement('afterend', sectionsContainer);
 
     const navSections = nav.querySelector('.nav-sections');
     if (navSections) {
