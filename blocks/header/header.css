@@ -245,6 +245,11 @@ header nav .nav-tools .button-container a .icon {
     padding-left: 7px;
 }
 
+header nav .nav-tools .button-container a .icon img {
+    width: 25px;
+    height: 25px;
+}
+
 @media only screen and (min-width: 767px) {
     header .nav-wrapper {
         height: var(--nav-height-desktop);
@@ -262,6 +267,7 @@ header nav .nav-tools .button-container a .icon {
 
     header nav .nav-brand img {
         height: var(--nav-height-desktop);
+        width: 280px;
     }
 
     header nav .nav-tools .button-container a{
