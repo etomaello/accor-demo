@@ -140,11 +140,17 @@ footer .hidden {
   fill: var(--color-brand-900);
 }
 
-/* start jordan changes */
 .footer-links {
     flex-basis: 100%;
     background-color: #050033;
-    margin: 12px 0;
+    max-width: 1436px;
+    margin: 0 auto;
+    border-top: 1px solid #25214e;
+    padding: 2.5rem 0;
+}
+
+.footer-links div:first-child {
+    border: 0;
 }
 
 .footer-links .open ul{
@@ -164,7 +170,8 @@ footer .hidden {
 }
 
 .footer-links ul {
-    display: none
+    display: none;
+    margin-top: 4px;
 }
 
 .footer-links li {
@@ -222,6 +229,78 @@ footer .hidden {
     transform: rotate(45deg);
 }
 
+.footer-loyalty {
+    margin: .5rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid #25214e;
+    max-width: 1436px;
+    margin: 0 auto;
+}
+
+.footer-loyalty a {
+    background: 0;
+    border-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    display: block;
+    padding: 13px 32px;
+    position: relative;
+    text-align: center;
+    transition: background .2s,border .2s;
+    width: fit-content;
+    margin: auto;
+    font-size: 16px;
+}
+
+.footer-loyalty a:hover {
+    text-decoration: none;
+    background: #fff;
+    border-color: #fff;
+    color: #1e1852;
+}
+
+.legal-links {
+    padding-top: 2rem;
+    border-top: 1px solid #25214e;
+    max-width: 1436px;
+    margin: 0 auto;
+    padding-bottom: .5rem;
+}
+
+.legal-links ul {
+    list-style: none;
+}
+
+.legal-links li {
+    margin-top: 0.375rem;
+}
+
+.legal-links a {
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.legal-copyright {
+    color: #8d88b4;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 1rem 0;
+}
+
+.legal-logos {
+    text-align: center;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.legal-logos picture:not(:last-child) {
+    margin-right: 34px; 
+}
+
 @media (min-width: 768px) {
     .footer-wrapper {
         padding: 1rem 2rem;
@@ -248,12 +327,37 @@ footer .hidden {
     .footer-links h2::before {
         display: none;
     }
+
+    .legal-links {
+        text-align: center;
+    }
+
+    .legal-links li {
+        display: inline-block;
+        margin: 0 19px;
+    }
+
+    .legal-links li:first-child {
+        margin-left: 0;
+    }
+
+    .legal-copyright {
+        text-align: center;
+    }
 }
 
 @media (min-width: 1024px) {
+    .footer-links {
+        padding-top: 3.25rem;
+    }
+
     .footer-links > div {
         flex-basis: 25%;
         margin: 0;
+    }
+
+    .footer-loyalty {
+        padding: 2.5rem 0
     }
 }
 
