@@ -5,10 +5,137 @@ footer {
 }
 
 footer .footer {
-  max-width: 1200px;
   margin: auto;
 }
 
 footer .footer p {
   margin: 0;
+}
+
+footer .hidden {
+  display: none;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.brands-collection .hidden {
+  display: none;
+}
+
+.brands-collection {
+  color: var(--color-text-inverse);
+  overflow: auto;
+  width: 100%;
+}
+
+.brands-collection-wrapper {
+  margin: 100px auto;
+  max-width: var(--max-width);
+}
+
+.brands-collection-hr {
+  border: 0;
+  border-top: 1px solid var(--color-background-light);
+  clear: both;
+  margin: 0;
+  opacity: 0.15;
+}
+
+.main {
+  opacity: 0.6;
+}
+
+.end {
+  margin-top: 25px;
+}
+
+.brands-collection-svg {
+  background-color: var(--color-brand-900);
+  display: block;
+  fill: var(--color-background-light);
+  height: 80px;
+  margin: -30px auto 45px;
+  padding: 0;
+  position: relative;
+  max-width: 250px;
+}
+
+.brands-collection-category {
+  font-style: italic;
+  color: var(--neutral-white, #fff);
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brands-collection-title {
+  font-family: Unna, Georgia, serif;
+  font-size: 24px;
+  width: min-content;
+}
+
+.brands-collection-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  padding-inline-start: 120px;
+}
+
+.brands-collection-elements {
+  list-style: none;
+  min-width: 5.7rem;
+}
+
+.brands-collection-elements-urls {
+  display: block;
+  height: 0;
+  padding-bottom: 50%;
+  position: relative;
+  margin-top: 0;
+  transition: background 0.3s ease-in-out;
+}
+
+.brands-collection-elements-urls:hover,
+.brands-collection-elements-urls:focus {
+  background: var(--color-button-secondary-inverse-hover);
+}
+
+.brands-collection-elements-urls:focus {
+  background: var(--color-background-light);
+}
+
+.brands-collection-elements-urls:active {
+  background: var(--color-brand-900);
+}
+
+.brands-collection-elements-logos {
+  display: block;
+  fill: #fff;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: fill 0.2s;
+  width: 100%;
+}
+
+.brands-collection-elements-logos:hover {
+  fill: var(--color-brand-900, #050033);
+}
+
+.brands-collection-elements:hover,
+.brands-collection-elements:focus,
+.brands-collection-elements:active {
+  fill: var(--color-brand-900);
 }

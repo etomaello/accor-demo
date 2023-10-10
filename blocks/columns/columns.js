@@ -47,7 +47,11 @@ export default function decorate(block) {
 
     const hr = document.createElement('hr');
 
-    const myColumnsSection = document.querySelector('.section.columns-container');
+    hr.className = 'columns-hr';
+
+    const myColumnsSection = document.querySelector(
+      '.section.columns-container',
+    );
 
     myColumnsSection.appendChild(hr);
   }
@@ -69,7 +73,9 @@ export default function decorate(block) {
     }
 
     // Update text container
-    const textContainer = block.children[0].querySelector('div > div:last-child');
+    const textContainer = block.children[0].querySelector(
+      'div > div:last-child',
+    );
     if (textContainer) {
       textContainer.classList.add('one-bloc-left-pics-description');
 
@@ -86,8 +92,6 @@ export default function decorate(block) {
       }
 
       // Create and insert additional text div
-      // const firstParagraph = textContainer.querySelector('p:first-child');
-      // const secondParagraph = textContainer.querySelector('p:nth-child(2)');
       const paragraphs = textContainer.querySelectorAll('p');
       const firstParagraph = paragraphs[0];
       const secondParagraph = paragraphs[1];
@@ -96,7 +100,6 @@ export default function decorate(block) {
         additionalTextDiv.style.textAlign = 'center';
         additionalTextDiv.innerHTML = `${firstParagraph.textContent}<br><span style="font-size:10px">${secondParagraph.textContent}</span>`;
         textContainer.insertBefore(additionalTextDiv, firstParagraph);
-
         // Remove old paragraphs
         firstParagraph.remove();
         secondParagraph.remove();
@@ -117,7 +120,7 @@ export default function decorate(block) {
         if (parentP && parentP.tagName === 'P') {
           textContainer.insertBefore(link, parentP);
           parentP.remove();
-          // trying here to add some space since the padding and margin don't work
+          // Trying here to add some space since the padding-margin don't work
           const emptyP = document.createElement('p');
           textContainer.insertBefore(emptyP, link);
         }

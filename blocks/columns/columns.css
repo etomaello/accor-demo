@@ -108,13 +108,13 @@ ul.text-div-list > li::before {
     margin: 0;
 }
 
-hr {
-    margin-top: 48px;
-    margin-bottom: 0;
-    width: 1212px;
-    border: 0;
-    border-bottom: 1px solid var(--border-decorative, #DADADD);
-    display: none;
+.columns-hr {
+  margin-top: 48px;
+  margin-bottom: 0;
+  width: 1212px;
+  border: 0;
+  border-bottom: 1px solid var(--border-decorative, #DADADD);
+  display: none;
 }
 
 .multi {
@@ -128,10 +128,10 @@ hr {
 }
 
 .one-bloc-left-pics-description {
-    font-family: Roboto, Arial, sans-serif;
-    flex: 1;
-    padding-left: 7.938rem;
-    color: var(--text-description-grey, #6f6e77);
+  flex: 1;
+  padding-left: 7.938rem;
+  color: var(--text-description-grey, #6f6e77);
+  font-family: Roboto, Arial, sans-serif;
 }
 
 .one-bloc-left-pics-description-title {
@@ -150,7 +150,7 @@ hr {
 }
 
 .one-bloc-left-pics-picture {
-    flex: 1;
+  flex: 1;
 }
 
 .one-bloc-left-pics-picture-img {
@@ -160,36 +160,33 @@ hr {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 767px) {
-    .one-bloc-left-pics {
-        display: block;
-        padding: 0;
-    }
+  .one-bloc-left-pics {
+    display: block;
+    padding: 0;
+  }
 
-    .one-bloc-left-pics-description {
-        padding: 1rem 0 0;
-
+  .one-bloc-left-pics-description {
+    padding: 1rem 0 0;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 1123px) {
-    .one-bloc-left-pics {
-        display: block;
-        padding: 0 5.813rem;
-    }
+  .one-bloc-left-pics {
+    display: block;
+    padding: 0 5.813rem;
+  }
 
-    .one-bloc-left-pics-picture {
-        width: 100%;
-    }
+  .one-bloc-left-pics-picture {
+    width: 100%;
+  }
 
-    .one-bloc-left-pics-picture-img {
-        margin: auto;
+  .one-bloc-left-pics-picture-img {
+    margin: auto;
 
-    }
+  }
 
-    .one-bloc-left-pics-description {
-        padding: 1rem 0 0;
-
+  .one-bloc-left-pics-description {
+    padding: 1rem 0 0;
     }
 }
-
