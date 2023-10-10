@@ -177,7 +177,7 @@ footer .hidden {
     line-height: 20px;
     font-weight: 400;
     margin-top: 12px;
-    display: block;
+    display: inline-block;
 }
 
 .footer-links a:hover {
