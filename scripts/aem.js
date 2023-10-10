@@ -404,6 +404,7 @@ function decorateIcon(span, prefix = '') {
     .substring(5);
   const img = document.createElement('img');
   img.dataset.iconName = iconName;
+  img.setAttribute('alt', iconName);
   img.src = `${window.hlx.codeBasePath}${prefix}/icons/${iconName}.svg`;
   img.loading = 'lazy';
   span.append(img);
