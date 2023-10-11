@@ -108,7 +108,7 @@ footer .hidden {
 
 .brands-collection-elements-urls:hover,
 .brands-collection-elements-urls:focus {
-  background: var(--color-button-secondary-inverse-hover);
+  background: var(--background-inverse-brand-default);
 }
 
 .brands-collection-elements-urls:focus {
@@ -126,7 +126,7 @@ footer .hidden {
   left: 0;
   position: absolute;
   top: 0;
-  transition: fill 0.2s;
+  transition: fill .2s;
   width: 100%;
 }
 
@@ -283,6 +283,10 @@ footer .hidden {
     font-weight: 400;
 }
 
+.legal-links a:hover {
+    text-decoration: none;
+}
+
 .legal-copyright {
     color: #8d88b4;
     font-size: 14px;
@@ -299,6 +303,48 @@ footer .hidden {
 
 .legal-logos picture:not(:last-child) {
     margin-right: 34px; 
+}
+
+.footer-help {
+    padding: 4rem 0;
+    border-top: 1px solid #25214e;
+}
+
+.footer-help h2 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: initial;
+    text-align: left;
+    margin: 0;
+    color: #fff;
+}
+
+.footer-help ul {
+    list-style: none;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.footer-help li {
+    margin-top: 12px;
+}
+
+.footer-help a {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.footer-help a:hover {
+    text-decoration: none;
+}
+
+.footer-newsletter h2 {
+    color: #fff;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: initial;
+    text-align: left;
+    margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -365,6 +411,26 @@ footer .hidden {
     .footer-links > div {
         flex-basis: 20%;
     }
-}
 
-/* end jordan changes */
+    .support-section {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 4rem;
+    }
+
+    .footer-help,
+    .footer-newsletter {
+        border-top: 0;
+        width: 50%;
+        padding: 0;
+    }
+
+    .footer-help {
+        padding-left: 2rem;
+    }
+
+    .footer-newsletter {
+        border-right: 1px solid #25214e;
+    }
+}

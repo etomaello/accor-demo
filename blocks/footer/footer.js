@@ -149,6 +149,10 @@ export default async function decorate(block) {
       }
     });
 
+    // newsletter section
+    const parentDivNewsletter = footer.querySelector('.footer-newsletter').parentNode;
+    parentDivNewsletter.classList.add('support-section');
+
     // Add the SVG icons sprites
     const hiddenDiv = document.createElement('div');
     hiddenDiv.className = 'hidden';
