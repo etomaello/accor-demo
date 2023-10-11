@@ -124,6 +124,103 @@ export default async function decorate(block) {
     container.innerHTML = '';
     container.appendChild(newContainer);
 
+    // toggle footer links on mobile
+    const footerLinks = footer.querySelector('.footer-links');
+
+    footerLinks.addEventListener('click', (event) => {
+      const { target } = event;
+
+      if (target.tagName.toLowerCase() === 'h2') {
+        // If the parent div is already open, close it
+        const parentDiv = target.closest('div > div').parentElement;
+        if (parentDiv.classList.contains('open')) {
+          parentDiv.classList.remove('open');
+          return;
+        }
+
+        // Remove "open" class from all sibling divs
+        const siblingDivs = target.closest('.footer-links').querySelectorAll('div > div');
+        siblingDivs.forEach((div) => {
+          div.parentElement.classList.remove('open');
+        });
+
+        // Add "open" class to the parent div of the clicked h2
+        parentDiv.classList.add('open');
+      }
+    });
+
+    // newsletter section
+    const parentDivNewsletter = footer.querySelector('.footer-newsletter').parentNode;
+    parentDivNewsletter.classList.add('support-section');
+
+    const footerNewsletter = footer.querySelector('.footer-newsletter');
+
+    const emailDiv = footerNewsletter.children[2].children[0];
+    const emailPlaceholder = emailDiv.textContent || 'e-mail@domain.com';
+
+    const emailInput = document.createElement('input');
+    emailInput.type = 'email';
+    emailInput.name = 'email'; // Important for form submission
+    emailInput.placeholder = emailPlaceholder;
+
+    const signupDiv = footerNewsletter.children[3].children[0];
+    const signupTitle = signupDiv.textContent || 'Sign up';
+    const formEndpoint = signupDiv.querySelector('a').getAttribute('href') || '/email-form.json';
+
+    const signupButton = document.createElement('button');
+    signupButton.type = 'submit';
+    signupButton.innerText = signupTitle;
+
+    const footerFormDiv = document.createElement('div');
+    footerFormDiv.className = 'footer-form';
+
+    footerFormDiv.appendChild(emailInput);
+    footerFormDiv.appendChild(signupButton);
+
+    footerNewsletter.replaceChild(footerFormDiv, emailDiv.parentNode);
+    signupDiv.parentNode.remove();
+
+    const form = document.createElement('form');
+    form.action = formEndpoint;
+    form.method = 'POST';
+
+    // Wrap all existing children divs with the form element
+    Array.from(footerNewsletter.children).forEach((child) => {
+      form.appendChild(child.cloneNode(true));
+    });
+
+    // Clear the footerNewsletter and append the form
+    footerNewsletter.innerHTML = '';
+    footerNewsletter.appendChild(form);
+
+    form.addEventListener('submit', (e) => {
+      // Prevent the default form submission
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      const formDataObj = {};
+      formData.forEach((value, key) => {
+        formDataObj[key] = value;
+      });
+      const jsonData = JSON.stringify(formDataObj);
+
+      fetch(formEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: jsonData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log('Form submission successful', data);
+        })
+        .catch((error) => {
+          console.log('Form submission failed', error);
+        });
+    });
+
     // Add the SVG icons sprites
     const hiddenDiv = document.createElement('div');
     hiddenDiv.className = 'hidden';
