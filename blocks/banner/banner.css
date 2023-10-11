@@ -6,22 +6,30 @@
     justify-content: space-between;
     margin-right: 0;
     padding: 2rem 5.188rem;
+    margin-left: 0;
 }
 
-@media (max-width: 768px) {
-    .bloc-enroll-banner {
-        display: block;
-        padding: 2rem;
-        text-align: center;
-    }
+.bloc-enroll-banner div {
+    width: 100%;
 }
 
-@media (max-width: 600px) {
-    .bloc-enroll-banner {
-        display: block;
-        padding: 2rem;
-        text-align: center;
-    }
+.bloc-enroll-banner {
+    display: block;
+    padding: 2rem;
+    text-align: center;
+}
+
+.bloc-enroll-banner .round-button {
+    background: var(--neutral-white, #FFF);
+    color: var(--icon-brand, #1E1852);
+    border-radius: 1.875rem;
+    display: table;
+    margin: auto;
+    padding: 0.813rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .bloc-enroll-banner-text {
@@ -33,35 +41,52 @@
     line-height: 2.25rem;
     margin: 0;
     color: var(--neutral-white, #FFF);
-    text-align: left;
+    text-align: center;
 }
 
 .bloc-enroll-banner-text-subtitle {
     line-height: 1.5rem;
     margin: 0;
     color: var(--neutral-white, #FFF);
-    text-align: left;
-}
-
-@media (max-width: 768px) {
-    .bloc-enroll-banner-text-subtitle {
-        padding: 0.625rem 0;
-    }
-}
-
-@media (max-width: 600px) {
-    .bloc-enroll-banner-text-subtitle {
-        padding: 0.625rem 0;
-    }
-}
-
-.bloc-enroll-banner-link .round-button {
-    background: var(--neutral-white, #FFF);
-    color: var(--icon-brand, #1E1852);
-    border-radius: 1.875rem;
-    display: table;
-    margin: auto;
-    padding: 0.813rem 2rem;
     text-align: center;
-    text-decoration: none;
+    padding: 0.625rem 0;
+}
+
+@media (min-width: 768px) {
+    .bloc-enroll-banner {
+        text-align: left;
+    }
+
+    .bloc-enroll-banner .round-button {
+        width: auto;
+    }
+
+    .bloc-enroll-banner-text-subtitle {
+        padding: 1rem 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .bloc-enroll-banner {
+        display: flex;
+        padding: 2rem 5.188rem;
+    }
+
+    .bloc-enroll-banner-text-title {
+        text-align: left;
+    }
+
+    .bloc-enroll-banner div {
+        width: auto;
+    }
+
+    .bloc-enroll-banner .round-button:hover {
+        background-color: rgba(255,255,255,.9);
+    }
+
+    .bloc-enroll-banner-text-subtitle {
+        text-align: left;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
 }
