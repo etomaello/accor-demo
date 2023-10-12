@@ -22,7 +22,7 @@
 .columns {
     display: flex;
     justify-content: center;
-    margin: 0 2rem 6rem;
+    margin: 0 1rem;
 }
 
 .column {
@@ -121,15 +121,13 @@ ul.text-div-list > li::before {
     display: none;
 }
 
-.one-bloc-left-pics {
+.columns .one-bloc-left-pics {
     align-items: center;
     display: flex;
-    flex-direction: row;
 }
 
 .one-bloc-left-pics-description {
   flex: 1;
-  padding-left: 7.938rem;
   color: var(--text-description-grey, #6f6e77);
   font-family: Roboto, Arial, sans-serif;
 }
@@ -138,6 +136,7 @@ ul.text-div-list > li::before {
     font-size: 2.25rem;
     line-height: 3rem;
     text-align: start;
+    margin-top: 0;
 }
 
 .one-bloc-left-pics-description-text {
@@ -158,23 +157,50 @@ ul.text-div-list > li::before {
     width: 100%;
 }
 
+.columns-img-col.one-bloc-left-pics-picture {
+    width: 100%;
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 767px) {
-  .one-bloc-left-pics {
+    .columns .one-bloc-left-pics {
     display: block;
     padding: 0;
   }
 
-  .one-bloc-left-pics-description {
+  .columns .one-bloc-left-pics-description {
     padding: 1rem 0 0;
     }
 }
 
+@media screen and (min-width: 768px) {
+    .columns .one-bloc-left-pics {
+    padding: 0 5.813rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .columns .one-bloc-left-pics {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .one-bloc-left-pics-description {
+        padding-left: 7.938rem;
+    }
+
+    .columns {
+        margin: 0 2rem;
+    }
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 1123px) {
+
+/* @media only screen and (min-width: 768px) and (max-width: 1123px) {
   .one-bloc-left-pics {
     display: block;
-    padding: 0 5.813rem;
   }
 
   .one-bloc-left-pics-picture {
@@ -189,4 +215,4 @@ ul.text-div-list > li::before {
   .one-bloc-left-pics-description {
     padding: 1rem 0 0;
     }
-}
+} */
