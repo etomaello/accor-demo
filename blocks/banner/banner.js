@@ -10,7 +10,9 @@ export default function decorate(block) {
   title.className = 'bloc-enroll-banner-text-title';
 
   const subtitle = block.querySelector('p:not(.button-container)');
-  subtitle.className = 'bloc-enroll-banner-text-subtitle';
+  if (subtitle) {
+    subtitle.className = 'bloc-enroll-banner-text-subtitle';
+  }
 
   // Create div for the link
   const linkDiv = document.createElement('div');
@@ -28,7 +30,10 @@ export default function decorate(block) {
 
   // Append the title and subtitle to textDiv
   textDiv.appendChild(title);
-  textDiv.appendChild(subtitle);
+
+  if (subtitle) {
+    textDiv.appendChild(subtitle);
+  }
 
   // Append the link to linkDiv
   linkDiv.appendChild(link);
