@@ -195,10 +195,6 @@ code, pre, samp {
     font-size: var(--body-font-size-s);
 }
 
-code,
-samp {
-}
-
 pre {
     overflow: scroll;
 }
@@ -309,10 +305,9 @@ main img {
 main .section {
     color: #6f6e77;
     font-family: Roboto, Arial, sans-serif;
-    margin: 2rem auto;
+    margin: 4rem auto 0;
     max-width: 90rem;
     overflow-x: hidden;
-    padding: 0 0 2rem;
 }
 
 /* section metadata */
@@ -325,6 +320,10 @@ main .section.highlight {
     margin-right: auto;
     max-width: 62.875rem;
     text-align: center;
+}
+
+.default-content-wrapper h2 {
+    margin: 0;
 }
 
 /* accordion */
@@ -346,6 +345,26 @@ main .section.highlight {
 .group-label.open strong::after {
     transform: rotate(315deg);
     top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    main .section {
+        margin: 5rem auto 0;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main .section {
+        margin: 6rem auto 0;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
 }
 
 @media screen and (max-width: 767px) {

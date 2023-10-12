@@ -33,7 +33,7 @@
 /* Box card */
 
 .box {
-  margin: 0 2rem 6rem;
+  margin: 0 1rem;
 }
 
 .box.row-blocs {
@@ -47,11 +47,11 @@
   flex-direction: row;
   justify-content: space-between;
   text-align: center;
+  gap: 2rem;
 }
 
 .bloc-picture {
   margin-bottom: 3.063rem;
-  padding: 0 0.75rem;
 }
 
 .bloc-picture.two {
@@ -92,7 +92,6 @@
 .row-blocs-usp-content {
   flex: 1;
   text-align: left;
-  margin-right: 4.375rem;
 }
 
 .row-blocs-usp-content:last-child {
@@ -125,13 +124,12 @@
   }
 
   .row-blocs-usp-content {
-    margin-bottom: 2.063rem;
     margin-right: 0;
-}
+    }
 
-.bloc-picture.three {
-  width:100%
-}
+    .bloc-picture.three {
+    width:100%
+    }
 }
 
 /* Push card */
@@ -161,6 +159,7 @@
   padding: 1.5rem;
   width: 49%;
   box-sizing: border-box;
+  margin-top: 0;
 }
 
 .push-container:hover {
@@ -200,3 +199,21 @@
   line-height: 1.5rem;
 }
 
+
+@media screen and (min-width: 768px) {
+    .push-container ,
+    .bloc-picture {
+        margin-bottom: 6rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .push-container ,
+    .bloc-picture {
+        margin-bottom: 8rem;
+    }
+
+    .box {
+        margin: 0 2rem;
+    }
+}

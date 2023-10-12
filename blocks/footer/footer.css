@@ -4,8 +4,16 @@ footer {
   font-size: var(--body-font-size-s);
 }
 
+.footer-wrapper {
+    margin-top: 6rem;
+}
+
 footer .footer {
   margin: auto;
+}
+
+.footer-links p {
+    text-align: left;
 }
 
 footer .footer p {
@@ -38,7 +46,7 @@ footer .hidden {
 }
 
 .brands-collection-wrapper {
-  margin: 100px auto 32px auto;
+  margin: 100px auto 32px;
   max-width: var(--max-width);
 }
 
@@ -156,8 +164,29 @@ footer .hidden {
     padding: 2.5rem 0;
 }
 
+.footer-links > div {
+    cursor:pointer;
+    border-top: 1px solid rgb(255 255 255 / 15%);
+    padding: 12px 0;
+}
+
 .footer-links div:first-child {
     border: 0;
+}
+
+.footer-links ul {
+    display: none;
+    margin-top: 4px;
+}
+
+.legal-links ul {
+    list-style: none;
+}
+
+.footer-help ul {
+    list-style: none;
+    margin-top: 30px;
+    padding: 0;
 }
 
 .footer-links .open ul{
@@ -172,15 +201,6 @@ footer .hidden {
     transform: rotate(-45deg);
 }
 
-.footer-links p {
-    text-align: left;
-}
-
-.footer-links ul {
-    display: none;
-    margin-top: 4px;
-}
-
 .footer-links li {
     list-style: none;
 }
@@ -192,56 +212,6 @@ footer .hidden {
     font-weight: 400;
     margin-top: 12px;
     display: inline-block;
-}
-
-.footer-links a:hover {
-    text-decoration: none;
-}
-
-.footer-links > div {
-    cursor:pointer;
-    border-top: 1px solid rgb(255 255 255 / 15%);
-    padding: 12px 0;
-}
-
-.footer-links h2 {
-    font-size: 18px;
-    color: #fff;
-    line-height: 24px;
-    text-align: left;
-    font-weight: 500;
-    margin: 0;
-    position: relative;
-}
-
-.footer-links h2::after,
-.footer-links h2::before {
-    background: #fff;
-    content: "";
-    display: block;
-    height: 2px;
-    position: absolute;
-    top: 50%;
-    transition: transform .5s;
-    width: 8px;
-}
-
-.footer-links h2::after {
-    right: 0;
-    transform: rotate(-45deg);
-}
-
-.footer-links h2::before {
-    right: 5px;
-    transform: rotate(45deg);
-}
-
-.footer-loyalty {
-    margin: .5rem 0;
-    padding: 2rem 0;
-    border-top: 1px solid #25214e;
-    max-width: 1436px;
-    margin: 0 auto;
 }
 
 .footer-loyalty a {
@@ -260,6 +230,39 @@ footer .hidden {
     font-size: 16px;
 }
 
+.legal-links a {
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.footer-help a {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    text-decoration: none;
+}
+
+.footer-links h2 {
+    font-size: 18px;
+    color: #fff;
+    line-height: 24px;
+    text-align: left;
+    font-weight: 500;
+    margin: 0;
+    position: relative;
+}
+
+.footer-loyalty {
+    padding: 2rem 0;
+    border-top: 1px solid #25214e;
+    max-width: 1436px;
+    margin: 0 auto;
+}
+
 .footer-loyalty a:hover {
     text-decoration: none;
     background: #fff;
@@ -275,19 +278,8 @@ footer .hidden {
     padding-bottom: .5rem;
 }
 
-.legal-links ul {
-    list-style: none;
-}
-
 .legal-links li {
     margin-top: 0.375rem;
-}
-
-.legal-links a {
-    color: #fff;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
 }
 
 .legal-links a:hover {
@@ -326,19 +318,8 @@ footer .hidden {
     color: #fff;
 }
 
-.footer-help ul {
-    list-style: none;
-    margin-top: 30px;
-    padding: 0;
-}
-
 .footer-help li {
     margin-top: 12px;
-}
-
-.footer-help a {
-    color: #fff;
-    font-size: 1rem;
 }
 
 .footer-help a:hover {
@@ -356,7 +337,7 @@ footer .hidden {
 
 .support-section {
     max-width: 1436px;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
 .footer-newsletter {
@@ -406,8 +387,29 @@ footer .hidden {
     flex-wrap: wrap;
 }
 
-@media (min-width: 768px) {
+.footer-links h2::after,
+.footer-links h2::before {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    transition: transform .5s;
+    width: 8px;
+}
 
+.footer-links h2::after {
+    right: 0;
+    transform: rotate(-45deg);
+}
+
+.footer-links h2::before {
+    right: 5px;
+    transform: rotate(45deg);
+}
+
+@media (min-width: 768px) {
     .brands-collection-list {
         padding-inline-start: 120px;
         width: calc((100% + 24px)/8*6 - 24px);
@@ -515,7 +517,7 @@ footer .hidden {
     } 
 
     .brands-collection-wrapper {
-        margin: 100px auto 4rem auto;
+        margin: 100px auto 4rem;
     }
 }
 
