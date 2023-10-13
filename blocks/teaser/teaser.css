@@ -1,0 +1,83 @@
+.teaser-wrapper{
+    background-color: #eef7f7;
+    padding: 2rem;
+    margin: 0 1rem;
+}
+
+.teaser.block > div{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.teaser-container img {
+    margin: 1.5rem 0 0;
+    min-width: 100%;
+    border-radius: 0.375rem;
+}
+
+.teaser-container h2 {
+    text-align: left;
+    margin: 0 0 .75rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: Montserrat, Arial, sans-serif;
+    margin-top: 1.125rem;
+}
+
+.teaser-container p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin: 2.25rem 0;
+}
+
+.teaser-container a.button {
+    width: 100%;
+    font-size: 1rem;
+    box-sizing: border-box;
+    padding: 0.813rem 2rem;
+    line-height: initial;
+}
+
+@media screen and (min-width: 768px) {
+    .teaser.block > div {
+        flex-direction: row-reverse;
+    }
+
+    .teaser.block > div div:first-child {
+        max-width: 45.625rem;
+    }
+
+    .teaser.block > div div:last-child {
+        max-width: 17.438rem;
+        min-width: 25rem;
+        margin: 0 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .teaser.block > div {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .teaser-wrapper { 
+        padding: 4rem;
+        margin: 0 2rem;
+    }
+
+    .teaser.block > div div:first-child {
+        text-align: left;
+    }
+
+    .teaser-container a.button {
+        width: auto;
+        margin: 0;
+    }
+
+    .teaser-container h2 {
+        font-size: 1.875rem;
+        line-height: 2.75rem;
+    }
+    
+}
