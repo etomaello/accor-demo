@@ -56,7 +56,7 @@ export default function decorate(block) {
     myColumnsSection.appendChild(hr);
   }
 
-  if (block.classList.contains('left-pic')) {
+  if (block.classList.value.split(' ').filter((cls) => cls.toLowerCase().includes('left-pic'))) {
     // Add classes to block
     block.children[0].classList.add('one-bloc-left-pics');
 
@@ -95,7 +95,7 @@ export default function decorate(block) {
       const paragraphs = textContainer.querySelectorAll('p');
       const firstParagraph = paragraphs[0];
       const secondParagraph = paragraphs[1];
-      if (firstParagraph && secondParagraph) {
+      if (firstParagraph && secondParagraph && block.classList.contains('left-pic-list')) {
         const additionalTextDiv = document.createElement('div');
         additionalTextDiv.style.textAlign = 'center';
         additionalTextDiv.innerHTML = `${firstParagraph.textContent}<br><span style="font-size:10px">${secondParagraph.textContent}</span>`;
